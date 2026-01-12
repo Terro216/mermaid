@@ -1,0 +1,19 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mermaid-race
+    restart: unless-stopped
+    networks:
+      - caddy_net
+    expose:
+      - 3000
+    labels:
+      # Use subdomain instead of path to avoid conflict with nestea
+      caddy: mermaid.xn--h1ag5cm.fun
+      caddy.reverse_proxy: "{{upstreams 3000}}"
+
+networks:
+  caddy_net:
+    external: true
