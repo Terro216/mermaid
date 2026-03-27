@@ -284,7 +284,7 @@ const HostView = () => {
       {/* Footer */}
       <footer className="relative z-10 text-center py-4 mt-8">
         <p className="text-ocean-foam/40 font-body text-sm">
-          илья.fun/mermaid
+          ilyamedve.dev/mermaid
         </p>
       </footer>
     </div>
